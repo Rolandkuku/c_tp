@@ -21,7 +21,8 @@ int afficheMenu(void)
     {
         case 1:
             printf("\nComparaison de 2 mots :\n\n");
-            wordIhm();
+            sortMyArr();
+            break;
         case 2:
             printf("Comparaison et tri");
             break;
