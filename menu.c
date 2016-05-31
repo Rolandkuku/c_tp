@@ -9,7 +9,9 @@ int myMenu(void)
     printf("1.Comparaison de 2 mots\n");
     printf("2.Comparaison et tri\n");
     printf("3.Rechercher un mot dans le dictionnaire\n");
-    printf("4.Ajouter un mot dans le dictionnaire\n\n");
+    printf("4.Ajouter un mot dans le dictionnaire\n");
+    printf("5.Supprimer un mot\n");
+    printf("6.Quitter\n");
     printf("Votre choix?\n");
     scanf("%d", &choixMenu);
     return choixMenu;
@@ -34,6 +36,10 @@ int afficheMenu(char* dic[])
             addWord(dic);
             break;
         case 5:
+            printf("Supprimer un mot\n\n");
+            removeWord(dic);
+            break;
+        case 6:
             printf("Quitter");
             return 1;
         default:

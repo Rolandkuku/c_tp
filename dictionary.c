@@ -41,7 +41,7 @@ int addWord(char* dic[]) {
     for(int i = 0; i < 99; i++) {
         if(strcmp(dic[i], "!empty!") == 0) {
             dic[i] = p_new_word;
-            printf("Added the word %s here !\n", p_new_word);
+            printf("Ajout de %s ici !\n", p_new_word);
             break;
         } else {
             printf("%s\n", dic[i]);
@@ -50,6 +50,22 @@ int addWord(char* dic[]) {
     return 0;
 }
 
-int removeWord() {
-
+int removeWord(char* dic[]) {
+    printf("Entrez un mot\n\n");
+    char new_word[50] = "";
+    char *p_new_word = &new_word;
+    int found = 0;
+    scanf("%s", p_new_word);
+    for(int i = 0; i < 99; i++) {
+        if(strcmp(dic[i], p_new_word) == 0) {
+            dic[i] = "!empty!";
+            printf("Suppression de %s \n", p_new_word);
+            found = 1;
+            break;
+        }
+    }
+    if (found == 0) {
+        printf("%s n'est pas dans la liste");
+    }
+    return 0;
 }
