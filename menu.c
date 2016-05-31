@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+#include "dictionary.c"
+
 
 int myMenu(void)
 {
@@ -26,6 +28,7 @@ int afficheMenu(void)
             break;
         case 3:
             printf("Rechercher un mot dans le dictionnaire");
+            dictionary();
             break;
         case 4:
             printf("Ajouter un mot dans le dictionnaire");
