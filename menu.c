@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "function.c"
 
 int myMenu(void)
 {
@@ -9,8 +10,8 @@ int myMenu(void)
     printf("1.Comparaison de 2 mots\n");
     printf("2.Comparaison et tri\n");
     printf("3.Rechercher un mot dans le dictionnaire\n");
-    printf("4.Ajouter un mot dans le dictionnaire\n\n\n");
-    printf("\nVotre choix?\n\n");
+    printf("4.Ajouter un mot dans le dictionnaire\n\n");
+    printf("Votre choix?\n");
     scanf("%d", &choixMenu);
     return choixMenu;
 }
@@ -19,8 +20,8 @@ int afficheMenu(void)
     switch (myMenu())
     {
         case 1:
-            printf("Comparaison de 2 mots");
-            break;
+            printf("\nComparaison de 2 mots :\n\n");
+            wordIhm();
         case 2:
             printf("Comparaison et tri");
             break;
