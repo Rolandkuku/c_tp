@@ -14,7 +14,7 @@ int myMenu(void)
     scanf("%d", &choixMenu);
     return choixMenu;
 }
-int main(void)
+int afficheMenu(void)
 {
     switch (myMenu())
     {
