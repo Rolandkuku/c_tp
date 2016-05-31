@@ -4,8 +4,9 @@
 #include "dictionary.c"
 
 int main(int argc, char *argv[]) {
-    int exit = 0;
-    while(afficheMenu() != 1) {
-        
+    char *dic[100];
+    createDic(dic, 100);
+    while(afficheMenu(dic) != 1) {
+
     }
 }
