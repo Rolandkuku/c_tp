@@ -14,7 +14,7 @@ int myMenu(void)
     scanf("%d", &choixMenu);
     return choixMenu;
 }
-int afficheMenu(void)
+int afficheMenu(char* dic[])
 {
     switch (myMenu())
     {
@@ -26,11 +26,11 @@ int afficheMenu(void)
             break;
         case 3:
             printf("Rechercher un mot dans le dictionnaire\n\n");
-            compareWords();
+            compareWords(dic);
             break;
         case 4:
             printf("Ajouter un mot dans le dictionnaire\n\n");
-            addWord();
+            addWord(dic);
             break;
         case 5:
             printf("Quitter");
