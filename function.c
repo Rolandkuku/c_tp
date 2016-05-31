@@ -6,6 +6,18 @@
 /* Partie 1 : Comparer des mots */
 
 /* Création de l'ihm */
+int sortAnArrTest(){
+    char array[] = {
+            "testa",
+            "testc",
+            "testb",
+            "testm",
+            "testae",
+    };
+
+    sortAnArr(array);
+}
+
 int wordIhm(){
     char premierMot[50], deuxiemeMot[50];
 
@@ -68,8 +80,7 @@ static int compare (void * a,void * b)
     return strcmp (*(char **) a, *(char **) b);
 }
 
-int sortMyArr()
-{
+int sortMyArr() {
     char premierMot[50], deuxiemeMot[50];
 
     printf("Entrer votre premier mot \n");
@@ -77,6 +88,7 @@ int sortMyArr()
 
     printf("\nEntrer votre deuxième mot \n");
     scanf("%s", deuxiemeMot);
+
     char * array[] = {
             premierMot,
             deuxiemeMot,
@@ -89,4 +101,15 @@ int sortMyArr()
     }
     return 0;
 }
+
+int sortAnArr(char *array[]){
+    int i;
+    qsort (array, n, sizeof (char *), compare);
+    for (i = 0; i < n; i++) {
+        printf ("%s.\n", array[i]);
+    }
+    return 0;
+}
+
+
 

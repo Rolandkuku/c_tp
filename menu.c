@@ -34,6 +34,10 @@ int afficheMenu(void)
             addWord();
             break;
         case 5:
+            printf("Trier un tableau\n\n");
+            sortAnArr();
+            break;
+        case 6:
             printf("Quitter");
             return 1;
         default:
