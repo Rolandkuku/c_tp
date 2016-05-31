@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define n_array sizeof(array)/sizeof(char *)
+#define n sizeof(array)/sizeof(char *)
 
 /* Partie 1 : Comparer des mots */
 
@@ -62,15 +62,6 @@ int sortWord(char *premierMot, char *deuxiemeMot)
 
     return 0;
 }*/
-char * array[] = {
-        "abadon",
-        "antimage",
-        "pudge",
-        "lina",
-        "ursa",
-        "meepo",
-        "invoker",
-};
 
 static int compare (void * a,void * b)
 {
@@ -79,9 +70,21 @@ static int compare (void * a,void * b)
 
 int sortMyArr()
 {
+    char premierMot[50], deuxiemeMot[50];
+
+    printf("Entrer votre premier mot \n");
+    scanf("%s", premierMot);
+
+    printf("\nEntrer votre deuxième mot \n");
+    scanf("%s", deuxiemeMot);
+    char * array[] = {
+            premierMot,
+            deuxiemeMot,
+    };
+
     int i;
-    qsort (array, n_array, sizeof (char *), compare);
-    for (i = 0; i < n_array; i++) {
+    qsort (array, n, sizeof (char *), compare);
+    for (i = 0; i < n; i++) {
         printf ("%s.\n", array[i]);
     }
     return 0;
