@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "menu.c"
+#include "dictionary.c"
 
 int main(int argc, char *argv[]) {
-    afficheMenu();
+    int exit = 0;
+    while(afficheMenu() != 1) {
+        
+    }
 }
