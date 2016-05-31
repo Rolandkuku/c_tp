@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#include "dictionary.c"
-
 
 int myMenu(void)
 {
@@ -27,17 +25,19 @@ int afficheMenu(void)
             printf("Comparaison et tri");
             break;
         case 3:
-            printf("Rechercher un mot dans le dictionnaire");
-            dictionary();
+            printf("Rechercher un mot dans le dictionnaire\n\n");
+            compareWords();
             break;
         case 4:
-            printf("Ajouter un mot dans le dictionnaire");
+            printf("Ajouter un mot dans le dictionnaire\n\n");
+            addWord();
             break;
+        case 5:
+            printf("Quitter");
+            return 1;
         default:
-            printf("Aucun choix");
-            break;
+            printf("Quitter");
+            return 1;
     }
-
-    system("PAUSE");
     return 0;
 }
