@@ -15,13 +15,10 @@ int wordIhm(){
     printf("\nEntrer votre deuxième mot \n");
     scanf("%s", deuxiemeMot);
 
-    /*if (wordIsEqual(premierMot, deuxiemeMot) == 1)
+    if (wordIsEqual(premierMot, deuxiemeMot) == 1)
         printf("\nLes deux mots sont équivalents\n");
     else
         printf("\nLes deux mots ne correspondent pas\n");
-    */
-
-    /*sortWord(premierMot, deuxiemeMot);*/
 
     return 0;
 }

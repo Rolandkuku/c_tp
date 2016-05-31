@@ -20,11 +20,11 @@ int afficheMenu(void)
     {
         case 1:
             printf("\nComparaison de 2 mots :\n\n");
-            sortMyArr();
+            wordIhm();
             break;
         case 2:
-            printf("Comparaison et tri");
-            break;
+            printf("Comparaison et tri\n\n");
+            sortMyArr();
         case 3:
             printf("Rechercher un mot dans le dictionnaire\n\n");
             compareWords();
